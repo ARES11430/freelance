@@ -1,0 +1,3540 @@
+{
+  "contractName": "Reputation",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_freeLancer",
+          "type": "address"
+        }
+      ],
+      "name": "getWithoutDispute",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_freeLancer",
+          "type": "address"
+        }
+      ],
+      "name": "getLancerWonDispute",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_freeLancer",
+          "type": "address"
+        }
+      ],
+      "name": "getLancerLostDispute",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_freeLancer",
+          "type": "address"
+        }
+      ],
+      "name": "setWithoutDispute",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_freeLancer",
+          "type": "address"
+        }
+      ],
+      "name": "setLanserWonDispute",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_freeLancer",
+          "type": "address"
+        }
+      ],
+      "name": "setLanserLostDispute",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.1+commit.df193b15\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_freeLancer\",\"type\":\"address\"}],\"name\":\"getLancerLostDispute\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_freeLancer\",\"type\":\"address\"}],\"name\":\"getLancerWonDispute\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_freeLancer\",\"type\":\"address\"}],\"name\":\"getWithoutDispute\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_freeLancer\",\"type\":\"address\"}],\"name\":\"setLanserLostDispute\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_freeLancer\",\"type\":\"address\"}],\"name\":\"setLanserWonDispute\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_freeLancer\",\"type\":\"address\"}],\"name\":\"setWithoutDispute\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/E/Ethereum projects/Freelancer/src/contracts/reputation/Reputation.sol\":\"Reputation\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/E/Ethereum projects/Freelancer/src/contracts/reputation/Reputation.sol\":{\"keccak256\":\"0x8d191ef959e1480934eff2a5e83f304abae6f44a150d1b62f1a008381eb5f02c\",\"license\":\"no-licence\",\"urls\":[\"bzz-raw://2eaa7a5ee47cb9e1933858dadcf06caa0db412d88fdc299f457d07989318629c\",\"dweb:/ipfs/QmPj2U9avdvDU3F6kYCCMSHn8HtigtYArbobN5fYCsk3oJ\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5061059d806100206000396000f3fe608060405234801561001057600080fd5b50600436106100625760003560e01c8063196d6e6c146100675780634cebeacc146100835780634d2c7aeb146100b35780635c7bd757146100cf5780638c6c757d146100ff578063d89f21981461011b575b600080fd5b610081600480360381019061007c91906104c1565b61014b565b005b61009d600480360381019061009891906104c1565b61021f565b6040516100aa91906104f9565b60405180910390f35b6100cd60048036038101906100c891906104c1565b61026a565b005b6100e960048036038101906100e491906104c1565b61033f565b6040516100f691906104f9565b60405180910390f35b610119600480360381019061011491906104c1565b61038b565b005b610135600480360381019061013091906104c1565b610460565b60405161014291906104f9565b60405180910390f35b6000808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060405180602001604052808373ffffffffffffffffffffffffffffffffffffffff168152509080600181540180825580915050600190039060005260206000200160009091909190915060008201518160000160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550505050565b60008060008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020805490509050919050565b600160008273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060405180602001604052808373ffffffffffffffffffffffffffffffffffffffff168152509080600181540180825580915050600190039060005260206000200160009091909190915060008201518160000160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550505050565b6000600160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020805490509050919050565b600260008273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060405180602001604052808373ffffffffffffffffffffffffffffffffffffffff168152509080600181540180825580915050600190039060005260206000200160009091909190915060008201518160000160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550505050565b6000600260008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020805490509050919050565b6000813590506104bb81610550565b92915050565b6000602082840312156104d357600080fd5b60006104e1848285016104ac565b91505092915050565b6104f381610546565b82525050565b600060208201905061050e60008301846104ea565b92915050565b600061051f82610526565b9050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000819050919050565b61055981610514565b811461056457600080fd5b5056fea26469706673582212203b436def090cf70529d033a04f6cb871d9e1fd4365b47343a1daecc8f50421bf64736f6c63430008010033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100625760003560e01c8063196d6e6c146100675780634cebeacc146100835780634d2c7aeb146100b35780635c7bd757146100cf5780638c6c757d146100ff578063d89f21981461011b575b600080fd5b610081600480360381019061007c91906104c1565b61014b565b005b61009d600480360381019061009891906104c1565b61021f565b6040516100aa91906104f9565b60405180910390f35b6100cd60048036038101906100c891906104c1565b61026a565b005b6100e960048036038101906100e491906104c1565b61033f565b6040516100f691906104f9565b60405180910390f35b610119600480360381019061011491906104c1565b61038b565b005b610135600480360381019061013091906104c1565b610460565b60405161014291906104f9565b60405180910390f35b6000808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060405180602001604052808373ffffffffffffffffffffffffffffffffffffffff168152509080600181540180825580915050600190039060005260206000200160009091909190915060008201518160000160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550505050565b60008060008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020805490509050919050565b600160008273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060405180602001604052808373ffffffffffffffffffffffffffffffffffffffff168152509080600181540180825580915050600190039060005260206000200160009091909190915060008201518160000160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550505050565b6000600160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020805490509050919050565b600260008273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060405180602001604052808373ffffffffffffffffffffffffffffffffffffffff168152509080600181540180825580915050600190039060005260206000200160009091909190915060008201518160000160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550505050565b6000600260008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020805490509050919050565b6000813590506104bb81610550565b92915050565b6000602082840312156104d357600080fd5b60006104e1848285016104ac565b91505092915050565b6104f381610546565b82525050565b600060208201905061050e60008301846104ea565b92915050565b600061051f82610526565b9050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000819050919050565b61055981610514565b811461056457600080fd5b5056fea26469706673582212203b436def090cf70529d033a04f6cb871d9e1fd4365b47343a1daecc8f50421bf64736f6c63430008010033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [
+    {
+      "ast": {
+        "nodeType": "YulBlock",
+        "src": "0:1214:7",
+        "statements": [
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "59:87:7",
+              "statements": [
+                {
+                  "nodeType": "YulAssignment",
+                  "src": "69:29:7",
+                  "value": {
+                    "arguments": [
+                      {
+                        "name": "offset",
+                        "nodeType": "YulIdentifier",
+                        "src": "91:6:7"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "calldataload",
+                      "nodeType": "YulIdentifier",
+                      "src": "78:12:7"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "78:20:7"
+                  },
+                  "variableNames": [
+                    {
+                      "name": "value",
+                      "nodeType": "YulIdentifier",
+                      "src": "69:5:7"
+                    }
+                  ]
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "name": "value",
+                        "nodeType": "YulIdentifier",
+                        "src": "134:5:7"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "validator_revert_t_address",
+                      "nodeType": "YulIdentifier",
+                      "src": "107:26:7"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "107:33:7"
+                  },
+                  "nodeType": "YulExpressionStatement",
+                  "src": "107:33:7"
+                }
+              ]
+            },
+            "name": "abi_decode_t_address",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "offset",
+                "nodeType": "YulTypedName",
+                "src": "37:6:7",
+                "type": ""
+              },
+              {
+                "name": "end",
+                "nodeType": "YulTypedName",
+                "src": "45:3:7",
+                "type": ""
+              }
+            ],
+            "returnVariables": [
+              {
+                "name": "value",
+                "nodeType": "YulTypedName",
+                "src": "53:5:7",
+                "type": ""
+              }
+            ],
+            "src": "7:139:7"
+          },
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "218:196:7",
+              "statements": [
+                {
+                  "body": {
+                    "nodeType": "YulBlock",
+                    "src": "264:16:7",
+                    "statements": [
+                      {
+                        "expression": {
+                          "arguments": [
+                            {
+                              "kind": "number",
+                              "nodeType": "YulLiteral",
+                              "src": "273:1:7",
+                              "type": "",
+                              "value": "0"
+                            },
+                            {
+                              "kind": "number",
+                              "nodeType": "YulLiteral",
+                              "src": "276:1:7",
+                              "type": "",
+                              "value": "0"
+                            }
+                          ],
+                          "functionName": {
+                            "name": "revert",
+                            "nodeType": "YulIdentifier",
+                            "src": "266:6:7"
+                          },
+                          "nodeType": "YulFunctionCall",
+                          "src": "266:12:7"
+                        },
+                        "nodeType": "YulExpressionStatement",
+                        "src": "266:12:7"
+                      }
+                    ]
+                  },
+                  "condition": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "name": "dataEnd",
+                            "nodeType": "YulIdentifier",
+                            "src": "239:7:7"
+                          },
+                          {
+                            "name": "headStart",
+                            "nodeType": "YulIdentifier",
+                            "src": "248:9:7"
+                          }
+                        ],
+                        "functionName": {
+                          "name": "sub",
+                          "nodeType": "YulIdentifier",
+                          "src": "235:3:7"
+                        },
+                        "nodeType": "YulFunctionCall",
+                        "src": "235:23:7"
+                      },
+                      {
+                        "kind": "number",
+                        "nodeType": "YulLiteral",
+                        "src": "260:2:7",
+                        "type": "",
+                        "value": "32"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "slt",
+                      "nodeType": "YulIdentifier",
+                      "src": "231:3:7"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "231:32:7"
+                  },
+                  "nodeType": "YulIf",
+                  "src": "228:2:7"
+                },
+                {
+                  "nodeType": "YulBlock",
+                  "src": "290:117:7",
+                  "statements": [
+                    {
+                      "nodeType": "YulVariableDeclaration",
+                      "src": "305:15:7",
+                      "value": {
+                        "kind": "number",
+                        "nodeType": "YulLiteral",
+                        "src": "319:1:7",
+                        "type": "",
+                        "value": "0"
+                      },
+                      "variables": [
+                        {
+                          "name": "offset",
+                          "nodeType": "YulTypedName",
+                          "src": "309:6:7",
+                          "type": ""
+                        }
+                      ]
+                    },
+                    {
+                      "nodeType": "YulAssignment",
+                      "src": "334:63:7",
+                      "value": {
+                        "arguments": [
+                          {
+                            "arguments": [
+                              {
+                                "name": "headStart",
+                                "nodeType": "YulIdentifier",
+                                "src": "369:9:7"
+                              },
+                              {
+                                "name": "offset",
+                                "nodeType": "YulIdentifier",
+                                "src": "380:6:7"
+                              }
+                            ],
+                            "functionName": {
+                              "name": "add",
+                              "nodeType": "YulIdentifier",
+                              "src": "365:3:7"
+                            },
+                            "nodeType": "YulFunctionCall",
+                            "src": "365:22:7"
+                          },
+                          {
+                            "name": "dataEnd",
+                            "nodeType": "YulIdentifier",
+                            "src": "389:7:7"
+                          }
+                        ],
+                        "functionName": {
+                          "name": "abi_decode_t_address",
+                          "nodeType": "YulIdentifier",
+                          "src": "344:20:7"
+                        },
+                        "nodeType": "YulFunctionCall",
+                        "src": "344:53:7"
+                      },
+                      "variableNames": [
+                        {
+                          "name": "value0",
+                          "nodeType": "YulIdentifier",
+                          "src": "334:6:7"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            "name": "abi_decode_tuple_t_address",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "headStart",
+                "nodeType": "YulTypedName",
+                "src": "188:9:7",
+                "type": ""
+              },
+              {
+                "name": "dataEnd",
+                "nodeType": "YulTypedName",
+                "src": "199:7:7",
+                "type": ""
+              }
+            ],
+            "returnVariables": [
+              {
+                "name": "value0",
+                "nodeType": "YulTypedName",
+                "src": "211:6:7",
+                "type": ""
+              }
+            ],
+            "src": "152:262:7"
+          },
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "485:53:7",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "name": "pos",
+                        "nodeType": "YulIdentifier",
+                        "src": "502:3:7"
+                      },
+                      {
+                        "arguments": [
+                          {
+                            "name": "value",
+                            "nodeType": "YulIdentifier",
+                            "src": "525:5:7"
+                          }
+                        ],
+                        "functionName": {
+                          "name": "cleanup_t_uint256",
+                          "nodeType": "YulIdentifier",
+                          "src": "507:17:7"
+                        },
+                        "nodeType": "YulFunctionCall",
+                        "src": "507:24:7"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "mstore",
+                      "nodeType": "YulIdentifier",
+                      "src": "495:6:7"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "495:37:7"
+                  },
+                  "nodeType": "YulExpressionStatement",
+                  "src": "495:37:7"
+                }
+              ]
+            },
+            "name": "abi_encode_t_uint256_to_t_uint256_fromStack",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "value",
+                "nodeType": "YulTypedName",
+                "src": "473:5:7",
+                "type": ""
+              },
+              {
+                "name": "pos",
+                "nodeType": "YulTypedName",
+                "src": "480:3:7",
+                "type": ""
+              }
+            ],
+            "src": "420:118:7"
+          },
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "642:124:7",
+              "statements": [
+                {
+                  "nodeType": "YulAssignment",
+                  "src": "652:26:7",
+                  "value": {
+                    "arguments": [
+                      {
+                        "name": "headStart",
+                        "nodeType": "YulIdentifier",
+                        "src": "664:9:7"
+                      },
+                      {
+                        "kind": "number",
+                        "nodeType": "YulLiteral",
+                        "src": "675:2:7",
+                        "type": "",
+                        "value": "32"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "add",
+                      "nodeType": "YulIdentifier",
+                      "src": "660:3:7"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "660:18:7"
+                  },
+                  "variableNames": [
+                    {
+                      "name": "tail",
+                      "nodeType": "YulIdentifier",
+                      "src": "652:4:7"
+                    }
+                  ]
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "name": "value0",
+                        "nodeType": "YulIdentifier",
+                        "src": "732:6:7"
+                      },
+                      {
+                        "arguments": [
+                          {
+                            "name": "headStart",
+                            "nodeType": "YulIdentifier",
+                            "src": "745:9:7"
+                          },
+                          {
+                            "kind": "number",
+                            "nodeType": "YulLiteral",
+                            "src": "756:1:7",
+                            "type": "",
+                            "value": "0"
+                          }
+                        ],
+                        "functionName": {
+                          "name": "add",
+                          "nodeType": "YulIdentifier",
+                          "src": "741:3:7"
+                        },
+                        "nodeType": "YulFunctionCall",
+                        "src": "741:17:7"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "abi_encode_t_uint256_to_t_uint256_fromStack",
+                      "nodeType": "YulIdentifier",
+                      "src": "688:43:7"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "688:71:7"
+                  },
+                  "nodeType": "YulExpressionStatement",
+                  "src": "688:71:7"
+                }
+              ]
+            },
+            "name": "abi_encode_tuple_t_uint256__to_t_uint256__fromStack_reversed",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "headStart",
+                "nodeType": "YulTypedName",
+                "src": "614:9:7",
+                "type": ""
+              },
+              {
+                "name": "value0",
+                "nodeType": "YulTypedName",
+                "src": "626:6:7",
+                "type": ""
+              }
+            ],
+            "returnVariables": [
+              {
+                "name": "tail",
+                "nodeType": "YulTypedName",
+                "src": "637:4:7",
+                "type": ""
+              }
+            ],
+            "src": "544:222:7"
+          },
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "817:51:7",
+              "statements": [
+                {
+                  "nodeType": "YulAssignment",
+                  "src": "827:35:7",
+                  "value": {
+                    "arguments": [
+                      {
+                        "name": "value",
+                        "nodeType": "YulIdentifier",
+                        "src": "856:5:7"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "cleanup_t_uint160",
+                      "nodeType": "YulIdentifier",
+                      "src": "838:17:7"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "838:24:7"
+                  },
+                  "variableNames": [
+                    {
+                      "name": "cleaned",
+                      "nodeType": "YulIdentifier",
+                      "src": "827:7:7"
+                    }
+                  ]
+                }
+              ]
+            },
+            "name": "cleanup_t_address",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "value",
+                "nodeType": "YulTypedName",
+                "src": "799:5:7",
+                "type": ""
+              }
+            ],
+            "returnVariables": [
+              {
+                "name": "cleaned",
+                "nodeType": "YulTypedName",
+                "src": "809:7:7",
+                "type": ""
+              }
+            ],
+            "src": "772:96:7"
+          },
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "919:81:7",
+              "statements": [
+                {
+                  "nodeType": "YulAssignment",
+                  "src": "929:65:7",
+                  "value": {
+                    "arguments": [
+                      {
+                        "name": "value",
+                        "nodeType": "YulIdentifier",
+                        "src": "944:5:7"
+                      },
+                      {
+                        "kind": "number",
+                        "nodeType": "YulLiteral",
+                        "src": "951:42:7",
+                        "type": "",
+                        "value": "0xffffffffffffffffffffffffffffffffffffffff"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "and",
+                      "nodeType": "YulIdentifier",
+                      "src": "940:3:7"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "940:54:7"
+                  },
+                  "variableNames": [
+                    {
+                      "name": "cleaned",
+                      "nodeType": "YulIdentifier",
+                      "src": "929:7:7"
+                    }
+                  ]
+                }
+              ]
+            },
+            "name": "cleanup_t_uint160",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "value",
+                "nodeType": "YulTypedName",
+                "src": "901:5:7",
+                "type": ""
+              }
+            ],
+            "returnVariables": [
+              {
+                "name": "cleaned",
+                "nodeType": "YulTypedName",
+                "src": "911:7:7",
+                "type": ""
+              }
+            ],
+            "src": "874:126:7"
+          },
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "1051:32:7",
+              "statements": [
+                {
+                  "nodeType": "YulAssignment",
+                  "src": "1061:16:7",
+                  "value": {
+                    "name": "value",
+                    "nodeType": "YulIdentifier",
+                    "src": "1072:5:7"
+                  },
+                  "variableNames": [
+                    {
+                      "name": "cleaned",
+                      "nodeType": "YulIdentifier",
+                      "src": "1061:7:7"
+                    }
+                  ]
+                }
+              ]
+            },
+            "name": "cleanup_t_uint256",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "value",
+                "nodeType": "YulTypedName",
+                "src": "1033:5:7",
+                "type": ""
+              }
+            ],
+            "returnVariables": [
+              {
+                "name": "cleaned",
+                "nodeType": "YulTypedName",
+                "src": "1043:7:7",
+                "type": ""
+              }
+            ],
+            "src": "1006:77:7"
+          },
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "1132:79:7",
+              "statements": [
+                {
+                  "body": {
+                    "nodeType": "YulBlock",
+                    "src": "1189:16:7",
+                    "statements": [
+                      {
+                        "expression": {
+                          "arguments": [
+                            {
+                              "kind": "number",
+                              "nodeType": "YulLiteral",
+                              "src": "1198:1:7",
+                              "type": "",
+                              "value": "0"
+                            },
+                            {
+                              "kind": "number",
+                              "nodeType": "YulLiteral",
+                              "src": "1201:1:7",
+                              "type": "",
+                              "value": "0"
+                            }
+                          ],
+                          "functionName": {
+                            "name": "revert",
+                            "nodeType": "YulIdentifier",
+                            "src": "1191:6:7"
+                          },
+                          "nodeType": "YulFunctionCall",
+                          "src": "1191:12:7"
+                        },
+                        "nodeType": "YulExpressionStatement",
+                        "src": "1191:12:7"
+                      }
+                    ]
+                  },
+                  "condition": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "name": "value",
+                            "nodeType": "YulIdentifier",
+                            "src": "1155:5:7"
+                          },
+                          {
+                            "arguments": [
+                              {
+                                "name": "value",
+                                "nodeType": "YulIdentifier",
+                                "src": "1180:5:7"
+                              }
+                            ],
+                            "functionName": {
+                              "name": "cleanup_t_address",
+                              "nodeType": "YulIdentifier",
+                              "src": "1162:17:7"
+                            },
+                            "nodeType": "YulFunctionCall",
+                            "src": "1162:24:7"
+                          }
+                        ],
+                        "functionName": {
+                          "name": "eq",
+                          "nodeType": "YulIdentifier",
+                          "src": "1152:2:7"
+                        },
+                        "nodeType": "YulFunctionCall",
+                        "src": "1152:35:7"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "iszero",
+                      "nodeType": "YulIdentifier",
+                      "src": "1145:6:7"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "1145:43:7"
+                  },
+                  "nodeType": "YulIf",
+                  "src": "1142:2:7"
+                }
+              ]
+            },
+            "name": "validator_revert_t_address",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "value",
+                "nodeType": "YulTypedName",
+                "src": "1125:5:7",
+                "type": ""
+              }
+            ],
+            "src": "1089:122:7"
+          }
+        ]
+      },
+      "contents": "{\n\n    function abi_decode_t_address(offset, end) -> value {\n        value := calldataload(offset)\n        validator_revert_t_address(value)\n    }\n\n    function abi_decode_tuple_t_address(headStart, dataEnd) -> value0 {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_address(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_encode_t_uint256_to_t_uint256_fromStack(value, pos) {\n        mstore(pos, cleanup_t_uint256(value))\n    }\n\n    function abi_encode_tuple_t_uint256__to_t_uint256__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        abi_encode_t_uint256_to_t_uint256_fromStack(value0,  add(headStart, 0))\n\n    }\n\n    function cleanup_t_address(value) -> cleaned {\n        cleaned := cleanup_t_uint160(value)\n    }\n\n    function cleanup_t_uint160(value) -> cleaned {\n        cleaned := and(value, 0xffffffffffffffffffffffffffffffffffffffff)\n    }\n\n    function cleanup_t_uint256(value) -> cleaned {\n        cleaned := value\n    }\n\n    function validator_revert_t_address(value) {\n        if iszero(eq(value, cleanup_t_address(value))) { revert(0, 0) }\n    }\n\n}\n",
+      "id": 7,
+      "language": "Yul",
+      "name": "#utility.yul"
+    }
+  ],
+  "sourceMap": "99:2147:4:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "99:2147:4:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1648:151;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;951:137;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;2081:162;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;1442:143;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;1861:157;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;1155:140;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;1648:151;1716:14;:27;1731:11;1716:27;;;;;;;;;;;;;;;1749:41;;;;;;;;1777:11;1749:41;;;;;1716:75;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1648:151;:::o;951:137::-;1022:4;1046:14;:27;1061:11;1046:27;;;;;;;;;;;;;;;:34;;;;1039:41;;951:137;;;:::o;2081:162::-;2152:18;:31;2171:11;2152:31;;;;;;;;;;;;;;;2189:45;;;;;;;;2221:11;2189:45;;;;;2152:83;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2081:162;:::o;1442:143::-;1515:4;1539:18;:31;1558:11;1539:31;;;;;;;;;;;;;;;:38;;;;1532:45;;1442:143;;;:::o;1861:157::-;1931:16;:29;1948:11;1931:29;;;;;;;;;;;;;;;1966:43;;;;;;;;1996:11;1966:43;;;;;1931:79;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1861:157;:::o;1155:140::-;1227:4;1251:16;:29;1268:11;1251:29;;;;;;;;;;;;;;;:36;;;;1244:43;;1155:140;;;:::o;7:139:7:-;;91:6;78:20;69:29;;107:33;134:5;107:33;:::i;:::-;59:87;;;;:::o;152:262::-;;260:2;248:9;239:7;235:23;231:32;228:2;;;276:1;273;266:12;228:2;319:1;344:53;389:7;380:6;369:9;365:22;344:53;:::i;:::-;334:63;;290:117;218:196;;;;:::o;420:118::-;507:24;525:5;507:24;:::i;:::-;502:3;495:37;485:53;;:::o;544:222::-;;675:2;664:9;660:18;652:26;;688:71;756:1;745:9;741:17;732:6;688:71;:::i;:::-;642:124;;;;:::o;772:96::-;;838:24;856:5;838:24;:::i;:::-;827:35;;817:51;;;:::o;874:126::-;;951:42;944:5;940:54;929:65;;919:81;;;:::o;1006:77::-;;1072:5;1061:16;;1051:32;;;:::o;1089:122::-;1162:24;1180:5;1162:24;:::i;:::-;1155:5;1152:35;1142:2;;1201:1;1198;1191:12;1142:2;1132:79;:::o",
+  "source": "// SPDX-License-Identifier: no-licence\r\n\r\npragma solidity ^0.8.1;\r\n\r\n// reputation for freeLancer\r\ncontract Reputation {           \r\n    \r\n    // Reputation Variables\r\n    struct WithoutDispute{\r\n        address freeLancer;      // address freeLancer\r\n    }\r\n    // Reputation Variables\r\n    struct EmployeeWonDispute{\r\n        address freeLancer;      // address freeLancer\r\n    }\r\n    // Reputation Variables\r\n    struct LancerWonDispute{\r\n        address freeLancer;      // address freeLancer\r\n    }\r\n    \r\n    mapping(address => WithoutDispute[]) withoutDispute;  // freeLancer => withoutDispute\r\n    mapping(address => EmployeeWonDispute[]) employeeWonDispute;  // freeLancer => employeeWonDispute\r\n    mapping(address => LancerWonDispute[]) lancerWonDispute;  // freeLancer => lancerWonDispute\r\n    \r\n    // Return the number of successful projects w/o dispute for spesific freeLancer\r\n    // It is used to measure freeLancer's reputation\r\n    function getWithoutDispute(address _freeLancer) external view returns (uint) {\r\n        return withoutDispute[_freeLancer].length;\r\n    }\r\n    // Return the number of disputes that freeLancer won...\r\n    function getLancerWonDispute(address _freeLancer) external view returns(uint) {\r\n        return lancerWonDispute[_freeLancer].length;\r\n    }\r\n    // Return the number of disputes that freeLancer lost and employee won...\r\n    // This number would be a negative point for freeLancer \r\n    function getLancerLostDispute(address _freeLancer) external view returns(uint) {\r\n        return employeeWonDispute[_freeLancer].length;\r\n    }\r\n    \r\n    // set reputation for no dispute finalization\r\n    function setWithoutDispute(address _freeLancer) external {\r\n        withoutDispute[_freeLancer].push(WithoutDispute({freeLancer: _freeLancer}));\r\n    }\r\n    \r\n    // set reputation for dispute and lancer win\r\n    function setLanserWonDispute(address _freeLancer) external {\r\n        lancerWonDispute[_freeLancer].push(LancerWonDispute({freeLancer: _freeLancer}));\r\n    }\r\n    \r\n    // set reputation for dispute and lancer lost\r\n    function setLanserLostDispute(address _freeLancer) external {\r\n        employeeWonDispute[_freeLancer].push(EmployeeWonDispute({freeLancer: _freeLancer}));\r\n    }\r\n}",
+  "sourcePath": "E:\\Ethereum projects\\Freelancer\\src\\contracts\\reputation\\Reputation.sol",
+  "ast": {
+    "absolutePath": "/E/Ethereum projects/Freelancer/src/contracts/reputation/Reputation.sol",
+    "exportedSymbols": {
+      "Reputation": [
+        1970
+      ]
+    },
+    "id": 1971,
+    "license": "no-licence",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1858,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".1"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "42:23:4"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 1970,
+        "linearizedBaseContracts": [
+          1970
+        ],
+        "name": "Reputation",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Reputation.WithoutDispute",
+            "id": 1861,
+            "members": [
+              {
+                "constant": false,
+                "id": 1860,
+                "mutability": "mutable",
+                "name": "freeLancer",
+                "nodeType": "VariableDeclaration",
+                "scope": 1861,
+                "src": "204:18:4",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 1859,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "204:7:4",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "WithoutDispute",
+            "nodeType": "StructDefinition",
+            "scope": 1970,
+            "src": "172:85:4",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "Reputation.EmployeeWonDispute",
+            "id": 1864,
+            "members": [
+              {
+                "constant": false,
+                "id": 1863,
+                "mutability": "mutable",
+                "name": "freeLancer",
+                "nodeType": "VariableDeclaration",
+                "scope": 1864,
+                "src": "328:18:4",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 1862,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "328:7:4",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "EmployeeWonDispute",
+            "nodeType": "StructDefinition",
+            "scope": 1970,
+            "src": "292:89:4",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "Reputation.LancerWonDispute",
+            "id": 1867,
+            "members": [
+              {
+                "constant": false,
+                "id": 1866,
+                "mutability": "mutable",
+                "name": "freeLancer",
+                "nodeType": "VariableDeclaration",
+                "scope": 1867,
+                "src": "450:18:4",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 1865,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "450:7:4",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "LancerWonDispute",
+            "nodeType": "StructDefinition",
+            "scope": 1970,
+            "src": "416:87:4",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 1873,
+            "mutability": "mutable",
+            "name": "withoutDispute",
+            "nodeType": "VariableDeclaration",
+            "scope": 1970,
+            "src": "515:51:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_struct$_WithoutDispute_$1861_storage_$dyn_storage_$",
+              "typeString": "mapping(address => struct Reputation.WithoutDispute[])"
+            },
+            "typeName": {
+              "id": 1872,
+              "keyType": {
+                "id": 1868,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "523:7:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "515:36:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_struct$_WithoutDispute_$1861_storage_$dyn_storage_$",
+                "typeString": "mapping(address => struct Reputation.WithoutDispute[])"
+              },
+              "valueType": {
+                "baseType": {
+                  "id": 1870,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 1869,
+                    "name": "WithoutDispute",
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 1861,
+                    "src": "534:14:4"
+                  },
+                  "referencedDeclaration": 1861,
+                  "src": "534:14:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_WithoutDispute_$1861_storage_ptr",
+                    "typeString": "struct Reputation.WithoutDispute"
+                  }
+                },
+                "id": 1871,
+                "nodeType": "ArrayTypeName",
+                "src": "534:16:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_struct$_WithoutDispute_$1861_storage_$dyn_storage_ptr",
+                  "typeString": "struct Reputation.WithoutDispute[]"
+                }
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 1879,
+            "mutability": "mutable",
+            "name": "employeeWonDispute",
+            "nodeType": "VariableDeclaration",
+            "scope": 1970,
+            "src": "606:59:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_struct$_EmployeeWonDispute_$1864_storage_$dyn_storage_$",
+              "typeString": "mapping(address => struct Reputation.EmployeeWonDispute[])"
+            },
+            "typeName": {
+              "id": 1878,
+              "keyType": {
+                "id": 1874,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "614:7:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "606:40:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_struct$_EmployeeWonDispute_$1864_storage_$dyn_storage_$",
+                "typeString": "mapping(address => struct Reputation.EmployeeWonDispute[])"
+              },
+              "valueType": {
+                "baseType": {
+                  "id": 1876,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 1875,
+                    "name": "EmployeeWonDispute",
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 1864,
+                    "src": "625:18:4"
+                  },
+                  "referencedDeclaration": 1864,
+                  "src": "625:18:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_EmployeeWonDispute_$1864_storage_ptr",
+                    "typeString": "struct Reputation.EmployeeWonDispute"
+                  }
+                },
+                "id": 1877,
+                "nodeType": "ArrayTypeName",
+                "src": "625:20:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_struct$_EmployeeWonDispute_$1864_storage_$dyn_storage_ptr",
+                  "typeString": "struct Reputation.EmployeeWonDispute[]"
+                }
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 1885,
+            "mutability": "mutable",
+            "name": "lancerWonDispute",
+            "nodeType": "VariableDeclaration",
+            "scope": 1970,
+            "src": "709:55:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_struct$_LancerWonDispute_$1867_storage_$dyn_storage_$",
+              "typeString": "mapping(address => struct Reputation.LancerWonDispute[])"
+            },
+            "typeName": {
+              "id": 1884,
+              "keyType": {
+                "id": 1880,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "717:7:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "709:38:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_struct$_LancerWonDispute_$1867_storage_$dyn_storage_$",
+                "typeString": "mapping(address => struct Reputation.LancerWonDispute[])"
+              },
+              "valueType": {
+                "baseType": {
+                  "id": 1882,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 1881,
+                    "name": "LancerWonDispute",
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 1867,
+                    "src": "728:16:4"
+                  },
+                  "referencedDeclaration": 1867,
+                  "src": "728:16:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_LancerWonDispute_$1867_storage_ptr",
+                    "typeString": "struct Reputation.LancerWonDispute"
+                  }
+                },
+                "id": 1883,
+                "nodeType": "ArrayTypeName",
+                "src": "728:18:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_struct$_LancerWonDispute_$1867_storage_$dyn_storage_ptr",
+                  "typeString": "struct Reputation.LancerWonDispute[]"
+                }
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 1897,
+              "nodeType": "Block",
+              "src": "1028:60:4",
+              "statements": [
+                {
+                  "expression": {
+                    "expression": {
+                      "baseExpression": {
+                        "id": 1892,
+                        "name": "withoutDispute",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1873,
+                        "src": "1046:14:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_struct$_WithoutDispute_$1861_storage_$dyn_storage_$",
+                          "typeString": "mapping(address => struct Reputation.WithoutDispute storage ref[] storage ref)"
+                        }
+                      },
+                      "id": 1894,
+                      "indexExpression": {
+                        "id": 1893,
+                        "name": "_freeLancer",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1887,
+                        "src": "1061:11:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "1046:27:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_struct$_WithoutDispute_$1861_storage_$dyn_storage",
+                        "typeString": "struct Reputation.WithoutDispute storage ref[] storage ref"
+                      }
+                    },
+                    "id": 1895,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "length",
+                    "nodeType": "MemberAccess",
+                    "src": "1046:34:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 1891,
+                  "id": 1896,
+                  "nodeType": "Return",
+                  "src": "1039:41:4"
+                }
+              ]
+            },
+            "functionSelector": "4cebeacc",
+            "id": 1898,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getWithoutDispute",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1888,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1887,
+                  "mutability": "mutable",
+                  "name": "_freeLancer",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1898,
+                  "src": "978:19:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1886,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "978:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "977:21:4"
+            },
+            "returnParameters": {
+              "id": 1891,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1890,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1898,
+                  "src": "1022:4:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1889,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1022:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1021:6:4"
+            },
+            "scope": 1970,
+            "src": "951:137:4",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 1910,
+              "nodeType": "Block",
+              "src": "1233:62:4",
+              "statements": [
+                {
+                  "expression": {
+                    "expression": {
+                      "baseExpression": {
+                        "id": 1905,
+                        "name": "lancerWonDispute",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1885,
+                        "src": "1251:16:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_struct$_LancerWonDispute_$1867_storage_$dyn_storage_$",
+                          "typeString": "mapping(address => struct Reputation.LancerWonDispute storage ref[] storage ref)"
+                        }
+                      },
+                      "id": 1907,
+                      "indexExpression": {
+                        "id": 1906,
+                        "name": "_freeLancer",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1900,
+                        "src": "1268:11:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "1251:29:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_struct$_LancerWonDispute_$1867_storage_$dyn_storage",
+                        "typeString": "struct Reputation.LancerWonDispute storage ref[] storage ref"
+                      }
+                    },
+                    "id": 1908,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "length",
+                    "nodeType": "MemberAccess",
+                    "src": "1251:36:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 1904,
+                  "id": 1909,
+                  "nodeType": "Return",
+                  "src": "1244:43:4"
+                }
+              ]
+            },
+            "functionSelector": "d89f2198",
+            "id": 1911,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getLancerWonDispute",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1901,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1900,
+                  "mutability": "mutable",
+                  "name": "_freeLancer",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1911,
+                  "src": "1184:19:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1899,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1184:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1183:21:4"
+            },
+            "returnParameters": {
+              "id": 1904,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1903,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1911,
+                  "src": "1227:4:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1902,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1227:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1226:6:4"
+            },
+            "scope": 1970,
+            "src": "1155:140:4",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 1923,
+              "nodeType": "Block",
+              "src": "1521:64:4",
+              "statements": [
+                {
+                  "expression": {
+                    "expression": {
+                      "baseExpression": {
+                        "id": 1918,
+                        "name": "employeeWonDispute",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1879,
+                        "src": "1539:18:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_struct$_EmployeeWonDispute_$1864_storage_$dyn_storage_$",
+                          "typeString": "mapping(address => struct Reputation.EmployeeWonDispute storage ref[] storage ref)"
+                        }
+                      },
+                      "id": 1920,
+                      "indexExpression": {
+                        "id": 1919,
+                        "name": "_freeLancer",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1913,
+                        "src": "1558:11:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "1539:31:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_struct$_EmployeeWonDispute_$1864_storage_$dyn_storage",
+                        "typeString": "struct Reputation.EmployeeWonDispute storage ref[] storage ref"
+                      }
+                    },
+                    "id": 1921,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "length",
+                    "nodeType": "MemberAccess",
+                    "src": "1539:38:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 1917,
+                  "id": 1922,
+                  "nodeType": "Return",
+                  "src": "1532:45:4"
+                }
+              ]
+            },
+            "functionSelector": "5c7bd757",
+            "id": 1924,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getLancerLostDispute",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1914,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1913,
+                  "mutability": "mutable",
+                  "name": "_freeLancer",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1924,
+                  "src": "1472:19:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1912,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1472:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1471:21:4"
+            },
+            "returnParameters": {
+              "id": 1917,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1916,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1924,
+                  "src": "1515:4:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1915,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1515:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1514:6:4"
+            },
+            "scope": 1970,
+            "src": "1442:143:4",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 1938,
+              "nodeType": "Block",
+              "src": "1705:94:4",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "id": 1934,
+                            "name": "_freeLancer",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 1926,
+                            "src": "1777:11:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          ],
+                          "id": 1933,
+                          "name": "WithoutDispute",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1861,
+                          "src": "1749:14:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_struct$_WithoutDispute_$1861_storage_ptr_$",
+                            "typeString": "type(struct Reputation.WithoutDispute storage pointer)"
+                          }
+                        },
+                        "id": 1935,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "structConstructorCall",
+                        "lValueRequested": false,
+                        "names": [
+                          "freeLancer"
+                        ],
+                        "nodeType": "FunctionCall",
+                        "src": "1749:41:4",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_WithoutDispute_$1861_memory_ptr",
+                          "typeString": "struct Reputation.WithoutDispute memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_WithoutDispute_$1861_memory_ptr",
+                          "typeString": "struct Reputation.WithoutDispute memory"
+                        }
+                      ],
+                      "expression": {
+                        "baseExpression": {
+                          "id": 1929,
+                          "name": "withoutDispute",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1873,
+                          "src": "1716:14:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_struct$_WithoutDispute_$1861_storage_$dyn_storage_$",
+                            "typeString": "mapping(address => struct Reputation.WithoutDispute storage ref[] storage ref)"
+                          }
+                        },
+                        "id": 1931,
+                        "indexExpression": {
+                          "id": 1930,
+                          "name": "_freeLancer",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1926,
+                          "src": "1731:11:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "1716:27:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_WithoutDispute_$1861_storage_$dyn_storage",
+                          "typeString": "struct Reputation.WithoutDispute storage ref[] storage ref"
+                        }
+                      },
+                      "id": 1932,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "src": "1716:32:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_WithoutDispute_$1861_storage_$returns$__$",
+                        "typeString": "function (struct Reputation.WithoutDispute storage ref)"
+                      }
+                    },
+                    "id": 1936,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1716:75:4",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1937,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1716:75:4"
+                }
+              ]
+            },
+            "functionSelector": "196d6e6c",
+            "id": 1939,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setWithoutDispute",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1927,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1926,
+                  "mutability": "mutable",
+                  "name": "_freeLancer",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1939,
+                  "src": "1675:19:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1925,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1675:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1674:21:4"
+            },
+            "returnParameters": {
+              "id": 1928,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1705:0:4"
+            },
+            "scope": 1970,
+            "src": "1648:151:4",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 1953,
+              "nodeType": "Block",
+              "src": "1920:98:4",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "id": 1949,
+                            "name": "_freeLancer",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 1941,
+                            "src": "1996:11:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          ],
+                          "id": 1948,
+                          "name": "LancerWonDispute",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1867,
+                          "src": "1966:16:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_struct$_LancerWonDispute_$1867_storage_ptr_$",
+                            "typeString": "type(struct Reputation.LancerWonDispute storage pointer)"
+                          }
+                        },
+                        "id": 1950,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "structConstructorCall",
+                        "lValueRequested": false,
+                        "names": [
+                          "freeLancer"
+                        ],
+                        "nodeType": "FunctionCall",
+                        "src": "1966:43:4",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_LancerWonDispute_$1867_memory_ptr",
+                          "typeString": "struct Reputation.LancerWonDispute memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_LancerWonDispute_$1867_memory_ptr",
+                          "typeString": "struct Reputation.LancerWonDispute memory"
+                        }
+                      ],
+                      "expression": {
+                        "baseExpression": {
+                          "id": 1944,
+                          "name": "lancerWonDispute",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1885,
+                          "src": "1931:16:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_struct$_LancerWonDispute_$1867_storage_$dyn_storage_$",
+                            "typeString": "mapping(address => struct Reputation.LancerWonDispute storage ref[] storage ref)"
+                          }
+                        },
+                        "id": 1946,
+                        "indexExpression": {
+                          "id": 1945,
+                          "name": "_freeLancer",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1941,
+                          "src": "1948:11:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "1931:29:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_LancerWonDispute_$1867_storage_$dyn_storage",
+                          "typeString": "struct Reputation.LancerWonDispute storage ref[] storage ref"
+                        }
+                      },
+                      "id": 1947,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "src": "1931:34:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_LancerWonDispute_$1867_storage_$returns$__$",
+                        "typeString": "function (struct Reputation.LancerWonDispute storage ref)"
+                      }
+                    },
+                    "id": 1951,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1931:79:4",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1952,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1931:79:4"
+                }
+              ]
+            },
+            "functionSelector": "8c6c757d",
+            "id": 1954,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setLanserWonDispute",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1942,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1941,
+                  "mutability": "mutable",
+                  "name": "_freeLancer",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1954,
+                  "src": "1890:19:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1940,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1890:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1889:21:4"
+            },
+            "returnParameters": {
+              "id": 1943,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1920:0:4"
+            },
+            "scope": 1970,
+            "src": "1861:157:4",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 1968,
+              "nodeType": "Block",
+              "src": "2141:102:4",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "id": 1964,
+                            "name": "_freeLancer",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 1956,
+                            "src": "2221:11:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          ],
+                          "id": 1963,
+                          "name": "EmployeeWonDispute",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1864,
+                          "src": "2189:18:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_struct$_EmployeeWonDispute_$1864_storage_ptr_$",
+                            "typeString": "type(struct Reputation.EmployeeWonDispute storage pointer)"
+                          }
+                        },
+                        "id": 1965,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "structConstructorCall",
+                        "lValueRequested": false,
+                        "names": [
+                          "freeLancer"
+                        ],
+                        "nodeType": "FunctionCall",
+                        "src": "2189:45:4",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_EmployeeWonDispute_$1864_memory_ptr",
+                          "typeString": "struct Reputation.EmployeeWonDispute memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_EmployeeWonDispute_$1864_memory_ptr",
+                          "typeString": "struct Reputation.EmployeeWonDispute memory"
+                        }
+                      ],
+                      "expression": {
+                        "baseExpression": {
+                          "id": 1959,
+                          "name": "employeeWonDispute",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1879,
+                          "src": "2152:18:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_struct$_EmployeeWonDispute_$1864_storage_$dyn_storage_$",
+                            "typeString": "mapping(address => struct Reputation.EmployeeWonDispute storage ref[] storage ref)"
+                          }
+                        },
+                        "id": 1961,
+                        "indexExpression": {
+                          "id": 1960,
+                          "name": "_freeLancer",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1956,
+                          "src": "2171:11:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "2152:31:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_EmployeeWonDispute_$1864_storage_$dyn_storage",
+                          "typeString": "struct Reputation.EmployeeWonDispute storage ref[] storage ref"
+                        }
+                      },
+                      "id": 1962,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "src": "2152:36:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_EmployeeWonDispute_$1864_storage_$returns$__$",
+                        "typeString": "function (struct Reputation.EmployeeWonDispute storage ref)"
+                      }
+                    },
+                    "id": 1966,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2152:83:4",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1967,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2152:83:4"
+                }
+              ]
+            },
+            "functionSelector": "4d2c7aeb",
+            "id": 1969,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setLanserLostDispute",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1957,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1956,
+                  "mutability": "mutable",
+                  "name": "_freeLancer",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1969,
+                  "src": "2111:19:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1955,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2111:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2110:21:4"
+            },
+            "returnParameters": {
+              "id": 1958,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2141:0:4"
+            },
+            "scope": 1970,
+            "src": "2081:162:4",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 1971,
+        "src": "99:2147:4"
+      }
+    ],
+    "src": "42:2204:4"
+  },
+  "legacyAST": {
+    "absolutePath": "/E/Ethereum projects/Freelancer/src/contracts/reputation/Reputation.sol",
+    "exportedSymbols": {
+      "Reputation": [
+        1970
+      ]
+    },
+    "id": 1971,
+    "license": "no-licence",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1858,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".1"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "42:23:4"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 1970,
+        "linearizedBaseContracts": [
+          1970
+        ],
+        "name": "Reputation",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Reputation.WithoutDispute",
+            "id": 1861,
+            "members": [
+              {
+                "constant": false,
+                "id": 1860,
+                "mutability": "mutable",
+                "name": "freeLancer",
+                "nodeType": "VariableDeclaration",
+                "scope": 1861,
+                "src": "204:18:4",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 1859,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "204:7:4",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "WithoutDispute",
+            "nodeType": "StructDefinition",
+            "scope": 1970,
+            "src": "172:85:4",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "Reputation.EmployeeWonDispute",
+            "id": 1864,
+            "members": [
+              {
+                "constant": false,
+                "id": 1863,
+                "mutability": "mutable",
+                "name": "freeLancer",
+                "nodeType": "VariableDeclaration",
+                "scope": 1864,
+                "src": "328:18:4",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 1862,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "328:7:4",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "EmployeeWonDispute",
+            "nodeType": "StructDefinition",
+            "scope": 1970,
+            "src": "292:89:4",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "Reputation.LancerWonDispute",
+            "id": 1867,
+            "members": [
+              {
+                "constant": false,
+                "id": 1866,
+                "mutability": "mutable",
+                "name": "freeLancer",
+                "nodeType": "VariableDeclaration",
+                "scope": 1867,
+                "src": "450:18:4",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 1865,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "450:7:4",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "LancerWonDispute",
+            "nodeType": "StructDefinition",
+            "scope": 1970,
+            "src": "416:87:4",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 1873,
+            "mutability": "mutable",
+            "name": "withoutDispute",
+            "nodeType": "VariableDeclaration",
+            "scope": 1970,
+            "src": "515:51:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_struct$_WithoutDispute_$1861_storage_$dyn_storage_$",
+              "typeString": "mapping(address => struct Reputation.WithoutDispute[])"
+            },
+            "typeName": {
+              "id": 1872,
+              "keyType": {
+                "id": 1868,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "523:7:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "515:36:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_struct$_WithoutDispute_$1861_storage_$dyn_storage_$",
+                "typeString": "mapping(address => struct Reputation.WithoutDispute[])"
+              },
+              "valueType": {
+                "baseType": {
+                  "id": 1870,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 1869,
+                    "name": "WithoutDispute",
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 1861,
+                    "src": "534:14:4"
+                  },
+                  "referencedDeclaration": 1861,
+                  "src": "534:14:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_WithoutDispute_$1861_storage_ptr",
+                    "typeString": "struct Reputation.WithoutDispute"
+                  }
+                },
+                "id": 1871,
+                "nodeType": "ArrayTypeName",
+                "src": "534:16:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_struct$_WithoutDispute_$1861_storage_$dyn_storage_ptr",
+                  "typeString": "struct Reputation.WithoutDispute[]"
+                }
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 1879,
+            "mutability": "mutable",
+            "name": "employeeWonDispute",
+            "nodeType": "VariableDeclaration",
+            "scope": 1970,
+            "src": "606:59:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_struct$_EmployeeWonDispute_$1864_storage_$dyn_storage_$",
+              "typeString": "mapping(address => struct Reputation.EmployeeWonDispute[])"
+            },
+            "typeName": {
+              "id": 1878,
+              "keyType": {
+                "id": 1874,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "614:7:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "606:40:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_struct$_EmployeeWonDispute_$1864_storage_$dyn_storage_$",
+                "typeString": "mapping(address => struct Reputation.EmployeeWonDispute[])"
+              },
+              "valueType": {
+                "baseType": {
+                  "id": 1876,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 1875,
+                    "name": "EmployeeWonDispute",
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 1864,
+                    "src": "625:18:4"
+                  },
+                  "referencedDeclaration": 1864,
+                  "src": "625:18:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_EmployeeWonDispute_$1864_storage_ptr",
+                    "typeString": "struct Reputation.EmployeeWonDispute"
+                  }
+                },
+                "id": 1877,
+                "nodeType": "ArrayTypeName",
+                "src": "625:20:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_struct$_EmployeeWonDispute_$1864_storage_$dyn_storage_ptr",
+                  "typeString": "struct Reputation.EmployeeWonDispute[]"
+                }
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 1885,
+            "mutability": "mutable",
+            "name": "lancerWonDispute",
+            "nodeType": "VariableDeclaration",
+            "scope": 1970,
+            "src": "709:55:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_struct$_LancerWonDispute_$1867_storage_$dyn_storage_$",
+              "typeString": "mapping(address => struct Reputation.LancerWonDispute[])"
+            },
+            "typeName": {
+              "id": 1884,
+              "keyType": {
+                "id": 1880,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "717:7:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "709:38:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_struct$_LancerWonDispute_$1867_storage_$dyn_storage_$",
+                "typeString": "mapping(address => struct Reputation.LancerWonDispute[])"
+              },
+              "valueType": {
+                "baseType": {
+                  "id": 1882,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 1881,
+                    "name": "LancerWonDispute",
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 1867,
+                    "src": "728:16:4"
+                  },
+                  "referencedDeclaration": 1867,
+                  "src": "728:16:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_LancerWonDispute_$1867_storage_ptr",
+                    "typeString": "struct Reputation.LancerWonDispute"
+                  }
+                },
+                "id": 1883,
+                "nodeType": "ArrayTypeName",
+                "src": "728:18:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_struct$_LancerWonDispute_$1867_storage_$dyn_storage_ptr",
+                  "typeString": "struct Reputation.LancerWonDispute[]"
+                }
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 1897,
+              "nodeType": "Block",
+              "src": "1028:60:4",
+              "statements": [
+                {
+                  "expression": {
+                    "expression": {
+                      "baseExpression": {
+                        "id": 1892,
+                        "name": "withoutDispute",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1873,
+                        "src": "1046:14:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_struct$_WithoutDispute_$1861_storage_$dyn_storage_$",
+                          "typeString": "mapping(address => struct Reputation.WithoutDispute storage ref[] storage ref)"
+                        }
+                      },
+                      "id": 1894,
+                      "indexExpression": {
+                        "id": 1893,
+                        "name": "_freeLancer",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1887,
+                        "src": "1061:11:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "1046:27:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_struct$_WithoutDispute_$1861_storage_$dyn_storage",
+                        "typeString": "struct Reputation.WithoutDispute storage ref[] storage ref"
+                      }
+                    },
+                    "id": 1895,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "length",
+                    "nodeType": "MemberAccess",
+                    "src": "1046:34:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 1891,
+                  "id": 1896,
+                  "nodeType": "Return",
+                  "src": "1039:41:4"
+                }
+              ]
+            },
+            "functionSelector": "4cebeacc",
+            "id": 1898,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getWithoutDispute",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1888,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1887,
+                  "mutability": "mutable",
+                  "name": "_freeLancer",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1898,
+                  "src": "978:19:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1886,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "978:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "977:21:4"
+            },
+            "returnParameters": {
+              "id": 1891,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1890,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1898,
+                  "src": "1022:4:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1889,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1022:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1021:6:4"
+            },
+            "scope": 1970,
+            "src": "951:137:4",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 1910,
+              "nodeType": "Block",
+              "src": "1233:62:4",
+              "statements": [
+                {
+                  "expression": {
+                    "expression": {
+                      "baseExpression": {
+                        "id": 1905,
+                        "name": "lancerWonDispute",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1885,
+                        "src": "1251:16:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_struct$_LancerWonDispute_$1867_storage_$dyn_storage_$",
+                          "typeString": "mapping(address => struct Reputation.LancerWonDispute storage ref[] storage ref)"
+                        }
+                      },
+                      "id": 1907,
+                      "indexExpression": {
+                        "id": 1906,
+                        "name": "_freeLancer",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1900,
+                        "src": "1268:11:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "1251:29:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_struct$_LancerWonDispute_$1867_storage_$dyn_storage",
+                        "typeString": "struct Reputation.LancerWonDispute storage ref[] storage ref"
+                      }
+                    },
+                    "id": 1908,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "length",
+                    "nodeType": "MemberAccess",
+                    "src": "1251:36:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 1904,
+                  "id": 1909,
+                  "nodeType": "Return",
+                  "src": "1244:43:4"
+                }
+              ]
+            },
+            "functionSelector": "d89f2198",
+            "id": 1911,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getLancerWonDispute",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1901,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1900,
+                  "mutability": "mutable",
+                  "name": "_freeLancer",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1911,
+                  "src": "1184:19:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1899,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1184:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1183:21:4"
+            },
+            "returnParameters": {
+              "id": 1904,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1903,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1911,
+                  "src": "1227:4:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1902,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1227:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1226:6:4"
+            },
+            "scope": 1970,
+            "src": "1155:140:4",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 1923,
+              "nodeType": "Block",
+              "src": "1521:64:4",
+              "statements": [
+                {
+                  "expression": {
+                    "expression": {
+                      "baseExpression": {
+                        "id": 1918,
+                        "name": "employeeWonDispute",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1879,
+                        "src": "1539:18:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_struct$_EmployeeWonDispute_$1864_storage_$dyn_storage_$",
+                          "typeString": "mapping(address => struct Reputation.EmployeeWonDispute storage ref[] storage ref)"
+                        }
+                      },
+                      "id": 1920,
+                      "indexExpression": {
+                        "id": 1919,
+                        "name": "_freeLancer",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1913,
+                        "src": "1558:11:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "1539:31:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_struct$_EmployeeWonDispute_$1864_storage_$dyn_storage",
+                        "typeString": "struct Reputation.EmployeeWonDispute storage ref[] storage ref"
+                      }
+                    },
+                    "id": 1921,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "length",
+                    "nodeType": "MemberAccess",
+                    "src": "1539:38:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 1917,
+                  "id": 1922,
+                  "nodeType": "Return",
+                  "src": "1532:45:4"
+                }
+              ]
+            },
+            "functionSelector": "5c7bd757",
+            "id": 1924,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getLancerLostDispute",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1914,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1913,
+                  "mutability": "mutable",
+                  "name": "_freeLancer",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1924,
+                  "src": "1472:19:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1912,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1472:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1471:21:4"
+            },
+            "returnParameters": {
+              "id": 1917,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1916,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1924,
+                  "src": "1515:4:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1915,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1515:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1514:6:4"
+            },
+            "scope": 1970,
+            "src": "1442:143:4",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 1938,
+              "nodeType": "Block",
+              "src": "1705:94:4",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "id": 1934,
+                            "name": "_freeLancer",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 1926,
+                            "src": "1777:11:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          ],
+                          "id": 1933,
+                          "name": "WithoutDispute",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1861,
+                          "src": "1749:14:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_struct$_WithoutDispute_$1861_storage_ptr_$",
+                            "typeString": "type(struct Reputation.WithoutDispute storage pointer)"
+                          }
+                        },
+                        "id": 1935,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "structConstructorCall",
+                        "lValueRequested": false,
+                        "names": [
+                          "freeLancer"
+                        ],
+                        "nodeType": "FunctionCall",
+                        "src": "1749:41:4",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_WithoutDispute_$1861_memory_ptr",
+                          "typeString": "struct Reputation.WithoutDispute memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_WithoutDispute_$1861_memory_ptr",
+                          "typeString": "struct Reputation.WithoutDispute memory"
+                        }
+                      ],
+                      "expression": {
+                        "baseExpression": {
+                          "id": 1929,
+                          "name": "withoutDispute",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1873,
+                          "src": "1716:14:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_struct$_WithoutDispute_$1861_storage_$dyn_storage_$",
+                            "typeString": "mapping(address => struct Reputation.WithoutDispute storage ref[] storage ref)"
+                          }
+                        },
+                        "id": 1931,
+                        "indexExpression": {
+                          "id": 1930,
+                          "name": "_freeLancer",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1926,
+                          "src": "1731:11:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "1716:27:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_WithoutDispute_$1861_storage_$dyn_storage",
+                          "typeString": "struct Reputation.WithoutDispute storage ref[] storage ref"
+                        }
+                      },
+                      "id": 1932,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "src": "1716:32:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_WithoutDispute_$1861_storage_$returns$__$",
+                        "typeString": "function (struct Reputation.WithoutDispute storage ref)"
+                      }
+                    },
+                    "id": 1936,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1716:75:4",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1937,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1716:75:4"
+                }
+              ]
+            },
+            "functionSelector": "196d6e6c",
+            "id": 1939,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setWithoutDispute",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1927,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1926,
+                  "mutability": "mutable",
+                  "name": "_freeLancer",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1939,
+                  "src": "1675:19:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1925,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1675:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1674:21:4"
+            },
+            "returnParameters": {
+              "id": 1928,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1705:0:4"
+            },
+            "scope": 1970,
+            "src": "1648:151:4",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 1953,
+              "nodeType": "Block",
+              "src": "1920:98:4",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "id": 1949,
+                            "name": "_freeLancer",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 1941,
+                            "src": "1996:11:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          ],
+                          "id": 1948,
+                          "name": "LancerWonDispute",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1867,
+                          "src": "1966:16:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_struct$_LancerWonDispute_$1867_storage_ptr_$",
+                            "typeString": "type(struct Reputation.LancerWonDispute storage pointer)"
+                          }
+                        },
+                        "id": 1950,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "structConstructorCall",
+                        "lValueRequested": false,
+                        "names": [
+                          "freeLancer"
+                        ],
+                        "nodeType": "FunctionCall",
+                        "src": "1966:43:4",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_LancerWonDispute_$1867_memory_ptr",
+                          "typeString": "struct Reputation.LancerWonDispute memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_LancerWonDispute_$1867_memory_ptr",
+                          "typeString": "struct Reputation.LancerWonDispute memory"
+                        }
+                      ],
+                      "expression": {
+                        "baseExpression": {
+                          "id": 1944,
+                          "name": "lancerWonDispute",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1885,
+                          "src": "1931:16:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_struct$_LancerWonDispute_$1867_storage_$dyn_storage_$",
+                            "typeString": "mapping(address => struct Reputation.LancerWonDispute storage ref[] storage ref)"
+                          }
+                        },
+                        "id": 1946,
+                        "indexExpression": {
+                          "id": 1945,
+                          "name": "_freeLancer",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1941,
+                          "src": "1948:11:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "1931:29:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_LancerWonDispute_$1867_storage_$dyn_storage",
+                          "typeString": "struct Reputation.LancerWonDispute storage ref[] storage ref"
+                        }
+                      },
+                      "id": 1947,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "src": "1931:34:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_LancerWonDispute_$1867_storage_$returns$__$",
+                        "typeString": "function (struct Reputation.LancerWonDispute storage ref)"
+                      }
+                    },
+                    "id": 1951,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1931:79:4",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1952,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1931:79:4"
+                }
+              ]
+            },
+            "functionSelector": "8c6c757d",
+            "id": 1954,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setLanserWonDispute",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1942,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1941,
+                  "mutability": "mutable",
+                  "name": "_freeLancer",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1954,
+                  "src": "1890:19:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1940,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1890:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1889:21:4"
+            },
+            "returnParameters": {
+              "id": 1943,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1920:0:4"
+            },
+            "scope": 1970,
+            "src": "1861:157:4",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 1968,
+              "nodeType": "Block",
+              "src": "2141:102:4",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "id": 1964,
+                            "name": "_freeLancer",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 1956,
+                            "src": "2221:11:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          ],
+                          "id": 1963,
+                          "name": "EmployeeWonDispute",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1864,
+                          "src": "2189:18:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_struct$_EmployeeWonDispute_$1864_storage_ptr_$",
+                            "typeString": "type(struct Reputation.EmployeeWonDispute storage pointer)"
+                          }
+                        },
+                        "id": 1965,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "structConstructorCall",
+                        "lValueRequested": false,
+                        "names": [
+                          "freeLancer"
+                        ],
+                        "nodeType": "FunctionCall",
+                        "src": "2189:45:4",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_EmployeeWonDispute_$1864_memory_ptr",
+                          "typeString": "struct Reputation.EmployeeWonDispute memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_EmployeeWonDispute_$1864_memory_ptr",
+                          "typeString": "struct Reputation.EmployeeWonDispute memory"
+                        }
+                      ],
+                      "expression": {
+                        "baseExpression": {
+                          "id": 1959,
+                          "name": "employeeWonDispute",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1879,
+                          "src": "2152:18:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_struct$_EmployeeWonDispute_$1864_storage_$dyn_storage_$",
+                            "typeString": "mapping(address => struct Reputation.EmployeeWonDispute storage ref[] storage ref)"
+                          }
+                        },
+                        "id": 1961,
+                        "indexExpression": {
+                          "id": 1960,
+                          "name": "_freeLancer",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1956,
+                          "src": "2171:11:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "2152:31:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_EmployeeWonDispute_$1864_storage_$dyn_storage",
+                          "typeString": "struct Reputation.EmployeeWonDispute storage ref[] storage ref"
+                        }
+                      },
+                      "id": 1962,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "src": "2152:36:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_EmployeeWonDispute_$1864_storage_$returns$__$",
+                        "typeString": "function (struct Reputation.EmployeeWonDispute storage ref)"
+                      }
+                    },
+                    "id": 1966,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2152:83:4",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1967,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2152:83:4"
+                }
+              ]
+            },
+            "functionSelector": "4d2c7aeb",
+            "id": 1969,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setLanserLostDispute",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1957,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1956,
+                  "mutability": "mutable",
+                  "name": "_freeLancer",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1969,
+                  "src": "2111:19:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1955,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2111:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2110:21:4"
+            },
+            "returnParameters": {
+              "id": 1958,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2141:0:4"
+            },
+            "scope": 1970,
+            "src": "2081:162:4",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 1971,
+        "src": "99:2147:4"
+      }
+    ],
+    "src": "42:2204:4"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.1+commit.df193b15.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0xAb21ef7BD4286746526B44FE2feC2267439B2B62",
+      "transactionHash": "0xadeffb9f6e99ec89971b5ad3b13c190843c71e31f4d6a8c88f400283c76c4fce"
+    }
+  },
+  "schemaVersion": "3.3.3",
+  "updatedAt": "2021-02-02T10:25:10.546Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
