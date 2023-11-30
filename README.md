@@ -1,3 +1,3 @@
 # freelance
 
-freelancers marketplace!
+freelancers decentralised marketplace!
